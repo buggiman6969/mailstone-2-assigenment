@@ -104,6 +104,43 @@ body{
     width: 160px;
     height: 40px;
 }
+/* =================PROJECTS==================== */
+.project-area{
+    display: flex;
+    justify-content: center;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    margin: 5%;
+    align-items: center;
+}
+.project-details{
+    width: 100%;
+    text-align: justify;
+    margin-left: 5%;
+    text-align: center;
+}
+.project-details>h2{
+    font-size: 25px;
+    font-weight: 600;
+}
+.project-photo>img:hover{
+    filter: grayscale(100%);
+}
+.project-photo{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 3%;
+    justify-items: center;
+    align-content: space-around;
+}
+.house-img{
+    width: 100%;
+}
 /* =================ALL FEATURES================= */
 .all-feature{
     display: flex;
@@ -157,23 +194,93 @@ body{
     height: max-content;
 }
 .f-btn{
-    border: 1px solid black;
     position: absolute;
     bottom: -6%;
     left: -5%;
     height: 100px;
     width: 150px;
+    transition: transform 3s ease-in-out ;
+}
+.f-right:hover .f-btn{
+    transform: rotate(360deg) scale(0.5) translate(100%);
+    transition: transform 0.5s ease-in; 
+    transform-origin: top right;
 }
 #experience{
     font-size: 14px;
     font-weight: 200;
 }
 /* =========================SOME FACTS====================== */
-
+.fact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0%;
+    align-items: center;
+    margin-bottom: -5%;
+}
+.some-facts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    margin: 5%;
+    align-items: center;
+    align-items: flex-start;
+}
+.fact-box{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-around;
+}
+.box{
+    border: 1px solid #FF900E;
+    margin: 15%;
+    text-align: center;
+    padding: 5%;
+}
 /* ========================SPONSORS======================= */
-
+.sponsors-area{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0%;
+    align-items: center;
+}
+.sponsors{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    margin: 5%;
+    align-items: center;
+    align-items: flex-start;
+}
+.logos{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-around;
+    margin-top: 2%;
+    padding: 2%;
+    filter: grayscale(100%);
+}
 /* ========================FOOTER====================== */
-
+.footer-area{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0%;
+    align-items: center;
+}
+.footer{
+    background-color: #FFF4E7;
+    margin-bottom: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
 /* ========================RESPONSIVE===================== */
 @media screen and (max-width: 576px) {
     /* ===============HEADER================= */
@@ -222,6 +329,10 @@ body{
         align-items: center;
         margin-bottom: 10%;
     }
+    /* =================PROJECTS==================== */
+    .project-photo{
+        grid-template-columns: repeat(2, 2fr);
+    }
     /* =================ALL FEATURES================= */
     .all-feature{
         display: flex;
@@ -257,10 +368,8 @@ body{
     .f-photo{
         margin-top: 5%;
         width: 90%;
-        
     }
     .f-btn{
-        border: 1px solid black;
         position: absolute;
         bottom: -6%;
         left: -5%;
@@ -270,6 +379,30 @@ body{
     #experience{
         font-size: 14px;
         font-weight: 200;
+    }
+    /* =========================SOME FACTS====================== */
+    .some-facts{
+        margin-top: 15%;
+    }
+    .fact-box{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .box{
+        margin: 5%;
+    }
+    /* ========================SPONSORS======================= */
+    .logos{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .logos>img{
+        width: 50%;
+        margin: 10%;
+    }
+    /* ========================FOOTER====================== */
+    .footer{
+        background-color: #FFF4E7;
+        text-align: center;
+        margin-bottom: 10%;
     }
 }
 
